@@ -1,0 +1,14 @@
+{
+  "name": "endlessmongo",
+  "version": "1.0.0",
+  "description": "a Mongo DB test program pertaining to the Endless.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew A. Anissi, Esq.",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.2.5"
+  }
+}
