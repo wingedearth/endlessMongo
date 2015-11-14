@@ -1,5 +1,7 @@
+var mongoose = require('./config/database');
 
-
+var Article = require('./models/blub');
+var User = require('./models/user');
 
 var users = [
   { // 0
