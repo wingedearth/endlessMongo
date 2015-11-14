@@ -12,8 +12,8 @@ var tagSchema = new mongoose.Schema({
 });
 
 var articleSchema = new mongoose.Schema({
-  _creator: { type: Schema.Types.ObjectId, ref: 'User' }
-, text: Text
+  creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+, text: String
 , timestamp: { type: Date, default: Date.now }
 , imageUri: String
 , tags: [tagSchema]

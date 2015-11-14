@@ -4,6 +4,6 @@ var locus    = require('locus')
 var Article = require('./models/article');
 var User = require('./models/user');
 
-eval(locus)
+// eval(locus)
 
 mongoose.disconnect();

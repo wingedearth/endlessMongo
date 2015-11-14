@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 var Article = require('./article');
 
 var userSchema = new mongoose.Schema({
-  email:    String,
-  handle:   String
+  email:     String,
+  handle:    String,
+  image_uri: String
 });
 
 // search articles by user/creator
@@ -20,9 +21,9 @@ userSchema.methods.comments = function(callback) {
   var user = this;
   Article.find({})
       .populate('comments.commenter')
-      .exec(function(err, blubs) {
+      .exec(function(err, articles) {
 
-    comments = blubs.reduce(function (comments, blub) {
+    comments = articles.reduce(function (comments, blub) {
       return comments.concat(Article.comments);
     }, []);
 
